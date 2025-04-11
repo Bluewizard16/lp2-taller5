@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS usuarios;
 
 CREATE TABLE IF NOT EXISTS usuarios (
     id SERIAL PRIMARY KEY,
+    usuario VARCHAR(50) NOT NULL,
     nombre VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL,
     password VARCHAR(100) NOT NULL,
@@ -28,10 +29,11 @@ CREATE TABLE IF NOT EXISTS comentarios (
     fecha_creacion timestamptz NOT NULL
 );
 
-INSERT INTO usuarios (nombre, email, password, fecha_creacion) VALUES
-    ('María Gómez', 'maria.gomez@email.com', 'maria123', NOW()),
-    ('Luis Fernández', 'luis.fernandez@email.com', 'luis123',NOW()),
-    ('Ana Torres', 'ana.torres@email.com', 'ana456', NOW());
+
+INSERT INTO usuarios (usuario, nombre, email, password, fecha_creacion) VALUES
+    ('maria_gomez', 'María Gómez', 'maria.gomez@email.com', 'maria123', NOW()),
+    ('luis_fernandez', 'Luis Fernández', 'luis.fernandez@email.com', 'luis123', NOW()),
+    ('ana_torres', 'Ana Torres', 'ana.torres@email.com', 'ana456', NOW());
 
 INSERT INTO publicaciones (id_usuario, titulo, contenido, url_imagen, fecha_creacion) VALUES
     (1, 'El poder de la rutina matutina: Cómo empezar tu día con intención',

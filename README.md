@@ -2,15 +2,15 @@
 
 Este taller práctico te guiará en el desarrollo de un sitio web tipo **Blog**, aplicando una arquitectura de microservicios. Aprenderás a construir una aplicación escalable y mantenible, descomponiendo la funcionalidad en cuatro componentes independientes.
 
-![commits](https://badgen.net/github/commits/UR-CC/lp2-taller5?icon=github) 
-![last_commit](https://img.shields.io/github/last-commit/UR-CC/lp2-taller5)
+![commits](https://badgen.net/github/commits/BlueWizard16/lp2-taller5?icon=github) 
+![last_commit](https://img.shields.io/github/last-commit/BlueWizard16/lp2-taller5)
 
 - ver [badgen](https://badgen.net/) o [shields](https://shields.io/) para otros tipos de _badges_
 
 ## Autores
 
-- [@estudiante1](https://www.github.com/estudiante1)
-- [@estudiante2](https://www.github.com/estudiante2)
+- [@William Angulo](https://www.github.com/BlueWizard16)
+- [@Valeria Lopez](https://www.github.com/estudiante2)
 
 ## Descripción del Proyecto
 
