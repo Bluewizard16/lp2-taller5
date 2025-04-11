@@ -8,5 +8,18 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+  app:
+    build: ./api
+    depends_on:
+      - database
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@database:5432/blogdb
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api:/api
+    working_dir: /api
+    
+
 volumes:
   pgdata:
