@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     nombre VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL,
     password VARCHAR(100) NOT NULL,
-    fecha_creacion timestamptz NOT NULL
+    fecha_creacion timestamptz NOT NULL DEFAULT NOW(),
 );
 
 DROP TABLE IF EXISTS publicaciones;
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS publicaciones (
     contenido TEXT NOT NULL,
     url_imagen VARCHAR(255),
     id_usuario INT REFERENCES usuarios (id) ON DELETE CASCADE,
-    "fecha_creacion" timestamptz NOT NULL
+    fecha_creacion timestamptz NOT NULL DEFAULT NOW()
 );
 
 DROP TABLE IF EXISTS comentarios;

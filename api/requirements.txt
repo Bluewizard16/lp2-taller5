@@ -1,6 +1,10 @@
-python-dotenv
 fastapi
-psycopg2-binary
-uvicorn
-pydantic
+uvicorn[standard]
 sqlalchemy
+psycopg2-binary
+pydantic
+python-multipart
+python-dotenv
+python-jose[cryptography]
+passlib[bcrypt]
+pydantic[email]

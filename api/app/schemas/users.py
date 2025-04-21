@@ -2,30 +2,22 @@ from pydantic import BaseModel, ConfigDict
 from datetime import datetime
 from typing import Optional
 
-# User login request schema
-class USR_LOG_REQ(BaseModel):
-    email: str
-    password: str
-
-# User base schema
-class USR(BaseModel):
+class UserBase(BaseModel):
     usuario: str
     nombre: str
     email: str
 
-# User response schema with additional fields
-class USR_RES(USR):
+class UserResponse(UserBase):
     id: int
     fecha_creacion: datetime
     model_config = ConfigDict(from_attributes=True)
 
-# User registration schema
-class USR_NW(USR):
+class UserCreate(UserBase):
     password: str
 
-# User update schema
-class USR_UP(BaseModel):
+class UserUpdate(UserBase):
     usuario: Optional[str] = None
     nombre: Optional[str] = None
     email: Optional[str] = None
     password: Optional[str] = None
+
