@@ -19,7 +19,15 @@ services:
     volumes:
       - ./api:/api
     working_dir: /api
-    
-
+  
+  web:
+    build: ./web
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./web/app/templates:/web/app/templates
+      - ./web/app/static:/web/app/static
+    working_dir: /web/app
+  
 volumes:
   pgdata:

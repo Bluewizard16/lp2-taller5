@@ -1,12 +1,12 @@
 DROP TABLE IF EXISTS usuarios;
 
-CREATE TABLE IF NOT EXISTS usuarios (
+CREATE TABLE usuarios (
     id SERIAL PRIMARY KEY,
-    usuario VARCHAR(50) NOT NULL,
-    nombre VARCHAR(50) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    password VARCHAR(100) NOT NULL,
-    fecha_creacion timestamptz NOT NULL DEFAULT NOW(),
+    usuario VARCHAR(255) UNIQUE NOT NULL,
+    nombre VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 DROP TABLE IF EXISTS publicaciones;
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS publicaciones (
     contenido TEXT NOT NULL,
     url_imagen VARCHAR(255),
     id_usuario INT REFERENCES usuarios (id) ON DELETE CASCADE,
-    fecha_creacion timestamptz NOT NULL DEFAULT NOW()
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 DROP TABLE IF EXISTS comentarios;
